@@ -1,0 +1,46 @@
+﻿@model IEnumerable<HackathonProject.Models.ResultViewModel>
+@{
+    ViewBag.Title = "LotteryResults";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="font-family:cursive">Lottery Results.</h2>
+<br />
+<h3 style="font-family:'Segoe UI';color:brown"> LIG Winners Mobile Number</h3>
+@if (ViewBag.LigListCount != 0)
+{
+    foreach (var item in ViewBag.LigList)
+    {
+        <p>@item.Text</p>
+    }
+}
+else
+{
+    <p style="color:red">LIG lottery is not drawn yet. Wait for the response.</p>
+}
+ <hr />
+<h3 style="font-family:'Segoe UI';color:brown"> HIG Winners Mobile Number</h3>
+@if (ViewBag.HigListCount != 0)
+{
+    foreach (var item in ViewBag.HigList)
+    {
+        <p>@item.Text</p>
+    }
+}
+else
+{
+        <p style="color:red">HIG lottery is not drawn yet. Wait for the response.</p>
+}
+<hr />
+<h3 style="font-family:'Segoe UI';color:brown"> MIG Winners Mobile Number</h3>
+@if (ViewBag.MigListCount != 0)
+{
+    foreach (var item in ViewBag.MigList)
+    {
+        <p>@item.Text</p>
+    }
+}
+else
+{
+        <p style="color:red">MIG lottery is not drawn yet. Wait for the response.</p>
+}

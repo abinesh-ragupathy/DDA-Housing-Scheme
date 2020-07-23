@@ -1,0 +1,69 @@
+﻿@model HackathonProject.Models.AllHous
+@{
+    ViewBag.Title = "Book House";
+}
+<style>
+    .boxed {
+        background-color: lightblue;
+    }
+    .btn-1 {
+        border: 3px solid salmon;
+        color: #fff;
+    }
+
+    .div-group .para {
+        border: none;
+        padding: 20px 500px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        float: left;
+    }
+</style>
+<h2 style="font-family:cursive">@ViewBag.Title.</h2>
+<br /> <br />
+@if (ViewBag.Message == "Select All Field(s) !")
+{
+    using (Html.BeginForm("BookHouse", "Home", FormMethod.Post))
+    {
+        <center>
+            <div class="boxed">
+                <br />
+                <div class="container">
+                    <div class="div-group">
+                        <p class="para"> @Html.DropDownList("Category", (IEnumerable<SelectListItem>)ViewBag.Category, "Select Category", new { @class = "form-control" }) </p>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success" style="vertical-align:middle">
+                    <span>Next </span>
+                </button>
+                <br />
+                <p style="font-family:'Book Antiqua';color:red">* All fields are Mandatory!</p>
+                <br />
+            </div>
+        </center>
+    }
+}
+else
+{
+    using (Html.BeginForm("BookHouse", "Home", FormMethod.Post))
+    {
+        <center>
+            <div class="boxed">
+                <br />
+                <div class="container">
+                    <div class="div-group">
+                        <p class="para"> @Html.DropDownList("Category", (IEnumerable<SelectListItem>)ViewBag.Category, "Select Category", new { @class = "form-control" }) </p>                      
+                    </div>
+                </div>
+                <br />
+            </div>
+            <br />
+            <button type="submit" class="btn btn-1 btn-success" style="vertical-align:middle">
+                <span>Next </span>
+            </button>
+        </center>
+    }
+}

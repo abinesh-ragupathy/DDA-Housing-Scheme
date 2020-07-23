@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HackathonModelStoreContainer" CdmEntityContainer="HackathonEntities1">
+    <EntitySetMapping Name="AllHouses">
+      <EntityTypeMapping TypeName="HackathonModel.AllHous">
+        <MappingFragment StoreEntitySet="AllHouses">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Inventory" ColumnName="Inventory" />
+          <ScalarProperty Name="MaxApplicants" ColumnName="MaxApplicants" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AllUsers">
+      <EntityTypeMapping TypeName="HackathonModel.AllUser">
+        <MappingFragment StoreEntitySet="AllUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="AadhaarNumber" ColumnName="AadhaarNumber" />
+          <ScalarProperty Name="UserAddress" ColumnName="UserAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Request_HIGs">
+      <EntityTypeMapping TypeName="HackathonModel.Request_HIG">
+        <MappingFragment StoreEntitySet="Request HIG">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Request_LIGs">
+      <EntityTypeMapping TypeName="HackathonModel.Request_LIG">
+        <MappingFragment StoreEntitySet="Request LIG">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Request_MIGs">
+      <EntityTypeMapping TypeName="HackathonModel.Request_MIG">
+        <MappingFragment StoreEntitySet="Request MIG">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Result_HIGs">
+      <EntityTypeMapping TypeName="HackathonModel.Result_HIG">
+        <MappingFragment StoreEntitySet="Result HIG">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Result_LIGs">
+      <EntityTypeMapping TypeName="HackathonModel.Result_LIG">
+        <MappingFragment StoreEntitySet="Result LIG">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Result_MIGs">
+      <EntityTypeMapping TypeName="HackathonModel.Result_MIG">
+        <MappingFragment StoreEntitySet="Result MIG">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
